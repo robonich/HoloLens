@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 13
-  productGUID: 1e490a87ad0e1944bb03e98b0c7b8f01
+  productGUID: e36aeb74f30bcea4fb81c997a2484070
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -103,6 +103,8 @@ PlayerSettings:
   n3dsEnableVSync: 0
   ignoreAlphaClear: 0
   xboxOneResolution: 0
+  xboxOneSResolution: 0
+  xboxOneXResolution: 3
   xboxOneMonoLoggingLevel: 0
   xboxOneLoggingLevel: 1
   xboxOneDisableEsram: 0
@@ -626,8 +628,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 5ad273cc-c02a-405f-aaee-c84e11f4c3b5
-  projectName: practiceHoloLens
+  cloudProjectId: affff8b8-2147-4453-a9eb-cd62df2229c0
+  projectName: practiceHoloLens (1)
   organizationId: robonich
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
