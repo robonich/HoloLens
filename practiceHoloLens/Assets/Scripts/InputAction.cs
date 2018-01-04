@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using HoloToolkit.Unity.InputModule;
 
-public class InputAction : MonoBehaviour, IInputClickHandler, IHoldHandler {
+public class InputAction : MonoBehaviour, IInputHandler, IHoldHandler {
     public void OnHoldCanceled(HoldEventData eventData)
     {
         GetComponent<Renderer>().material.color = Color.yellow;
@@ -19,19 +19,27 @@ public class InputAction : MonoBehaviour, IInputClickHandler, IHoldHandler {
         GetComponent<Renderer>().material.color = Color.blue;
     }
 
-    public void OnInputClicked(InputClickedEventData eventData)
+    public void OnInputDown(InputEventData eventData)
     {
-        //GetComponent<Renderer>().material.color = Color.red;
-        //var rigidbody = gameObject.AddComponent<Rigidbody>();
-        //rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        print("Input Down");
     }
 
+    public void OnInputUp(InputEventData eventData)
+    {
+        print("Input Up");
+    }
 
+    void OnDraggingStopped()
+    {
+        print("Drag stopped");
+    }
 
 
 
     // Use this for initialization
     void Start () {
+        var handDraggable = this.GetComponent<HandDraggable>();
+        handDraggable.StoppedDragging += OnDraggingStopped;
     }
 	
 	// Update is called once per frame
